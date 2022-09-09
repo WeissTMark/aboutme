@@ -1,41 +1,31 @@
+import React from 'react'
 import {
     HashRouter as Router,
-      Routes,
-      Route} from "react-router-dom";
-  import Home from './pages/home';
-  import Classes from './pages/classes'
-  import Resume from './pages/resume'
-  import Projects from './pages/projects'
-  import { createTheme, ThemeProvider } from '@mui/material/styles';
-  import './App.css';
+    Routes,
+    Route
+} from "react-router-dom";
+import Home from './pages/home';
+import Classes from './pages/classes'
+import Resume from './pages/resume'
+import Projects from './pages/projects'
+import {createTheme, ThemeProvider} from '@mui/material/styles';
 
-  const theme = createTheme({
+const theme = createTheme({
     palette: {
-      primary: {
-        main: '#5ed6b4',
-        light: '#6de8c5',
-        dark: '#44b393',
-        contrastText: '#000000'
-      },
-      secondary: {
-        main: '#21154d',
-        light: '#2f1f69',
-        dark: '#130b30',
-        contrastText: '#FFFFFF'
-      },
-      background: {
-        paper: '#616161',
-        default: '#616161'
-      }
+        type: 'light',
+        primary: {
+            main: '#4527a0',
+        },
+        secondary: {
+            main: '#26a69a',
+        },
+        error: {
+            main: '#ff3d00',
+        },
     },
-    typography: {
-        fontFamily: [
-            'Arial',
-        ]
-    }
-  });
-  
-  function App() {
+});
+
+function App() {
     return (
         <ThemeProvider theme={theme}>
             <Router>
@@ -48,6 +38,6 @@ import {
             </Router>
         </ThemeProvider>
     );
-  }
-  
-  export default App;
+}
+
+export default App;

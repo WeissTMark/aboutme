@@ -15,7 +15,14 @@ export default function Resume() {
     return (
         <>
             <Header/>
-            <Paper elevation={3} sx={{m:1}}>
+            <Paper elevation={3} sx={{m:1, display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                textAlign: "center",
+                verticalAlign: "middle",
+                bgcolor: '#e8e8e8',
+                boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.25)",
+                borderRadius: "25px",}}>
                 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', padding:6, height:height}}>
                     <Document  file={resume} options={{workerSrc: "pdf.worker.js"}} onLoadSuccess={onDocumentLoadSuccess}>
                         <Page height={height} pageNumber={pageNumber} />
