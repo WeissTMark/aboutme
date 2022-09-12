@@ -11,7 +11,8 @@ import {
     MobileStepper,
     Paper,
     Slide,
-    Typography
+    Typography,
+    Link
 } from "@mui/material";
 import CloseIcon from '@mui/icons-material/Close';
 import tree from '../files/tree.png'
@@ -130,6 +131,10 @@ export default function Home() {
                 }}>
                     <Grid item xs={12}>
                         <Typography variant={'h1'} color='secondary'>Who is Mark Weiss?</Typography>
+                        <Typography variant={'paragraph'} color='error'>This site is currently under construction, I appologize for the inconvinience.</Typography>
+                        <div></div>
+                        <Typography variant={'paragraph'} color='error'>Feel free to watch my progress at: </Typography>
+                        <Link href="https://github.com/WeissTMark/aboutme">github.com/WeissTMark/aboutme</Link>
                     </Grid>
                     {images.map((img, index) => {
                         if (index === activeStep) {
