@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import Header from '../tools/bar';
 import {
     Button,
@@ -23,7 +23,7 @@ import novat from '../files/novatowel.jpg'
 import painting from '../files/painting.jpg'
 import mns from '../files/marknsarah.jpg'
 import axe from '../files/markaxe.jpg'
-import {KeyboardArrowLeft, KeyboardArrowRight} from "@mui/icons-material";
+import { KeyboardArrowLeft, KeyboardArrowRight } from "@mui/icons-material";
 
 
 const images = [
@@ -111,7 +111,7 @@ export default function Home() {
 
     return (
         <>
-            <Header/>
+            <Header />
             <Paper elevation={3} sx={{
                 m: 1, display: "flex",
                 justifyContent: "center",
@@ -122,13 +122,10 @@ export default function Home() {
                 boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.25)",
                 borderRadius: "25px",
             }}>
-                <Grid container sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center",
-                    textAlign: "center",
-                    verticalAlign: "middle",
-                }}>
+                <Grid container
+                    direction="row"
+                    justifyContent="center"
+                    alignItems="center">
                     <Grid item xs={12}>
                         <Typography variant={'h1'} color='secondary'>Who is Mark Weiss?</Typography>
                         <Typography variant={'paragraph'} color='error'>This site is currently under construction, I appologize for the inconvinience.</Typography>
@@ -136,76 +133,82 @@ export default function Home() {
                         <Typography variant={'paragraph'} color='error'>Feel free to watch my progress at: </Typography>
                         <Link href="https://github.com/WeissTMark/aboutme">github.com/WeissTMark/aboutme</Link>
                     </Grid>
-                    {images.map((img, index) => {
-                        if (index === activeStep) {
-                            return (
-                                <Grid container spacing={1} sx={{m:1}}>
-                                    <Grid item xs={4}>
-                                        {index > 0 ?
+                    <Grid item xs={6}>
+                        {images.map((img, index) => {
+                            if (index === activeStep) {
+                                return (
+                                    <Grid container spacing={1} sx={{ m: 1 }}>
+                                        <Grid item xs={4}>
+                                            {index > 0 ?
                                                 <Card>
                                                     <CardMedia
                                                         component="img"
                                                         height="380"
                                                         src={images[index - 1].imgPath}
                                                         alt={images[index - 1].label}
-                                                        onClick={() => {handleTreeOpen(-1)}}
+                                                        onClick={() => { handleTreeOpen(-1) }}
                                                     />
                                                 </Card>
-                                            : <></>}
-                                    </Grid>
-                                    <Grid item xs={4}>
+                                                : <></>}
+                                        </Grid>
+                                        <Grid item xs={4}>
                                             <Card>
                                                 <CardMedia
                                                     component="img"
                                                     height="400"
                                                     src={img.imgPath}
                                                     alt={img.label}
-                                                    onClick={() => {handleTreeOpen(0)}}
+                                                    onClick={() => { handleTreeOpen(0) }}
                                                 />
                                             </Card>
-                                    </Grid>
-                                    <Grid item xs={4} sx={{alignContent: 'center'}}>
-                                        {index < maxSteps - 1 ?
+                                        </Grid>
+                                        <Grid item xs={4} sx={{ alignContent: 'center' }}>
+                                            {index < maxSteps - 1 ?
                                                 <Card>
                                                     <CardMedia
                                                         component="img"
                                                         height="380"
                                                         src={images[index + 1].imgPath}
                                                         alt={images[index + 1].label}
-                                                        onClick={() => {handleTreeOpen(1)}}
+                                                        onClick={() => { handleTreeOpen(1) }}
                                                     />
                                                 </Card>
-                                            : <></>}
+                                                : <></>}
+                                        </Grid>
                                     </Grid>
-                                </Grid>
-                            )
-                        } else {
-                            return (<></>)
-                        }
+                                )
+                            } else {
+                                return (<></>)
+                            }
 
-                    })}
-                    <Grid item xs={12}/>
-                    <Grid item xs={3}>
-                        <MobileStepper variant="dots"
-                                       steps={maxSteps}
-                                       sx={{bgcolor: 'transparent'}}
-                                       position="static"
-                                       activeStep={activeStep}
-                                       nextButton={
-                                           <Button
-                                               size="small"
-                                               onClick={handleNext}
-                                               disabled={activeStep === maxSteps - 1}
-                                           >Next<KeyboardArrowRight/>
-                                           </Button>
-                                       }
-                                       backButton={
-                                           <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
-                                               <KeyboardArrowLeft/>Back
-                                           </Button>
-                                       }
-                        />
+                        })}
+                        <Grid item xs={8} justifyContent="center" alignItems="center" >
+                            <MobileStepper variant="dots"
+                                steps={maxSteps}
+                                sx={{ bgcolor: 'transparent' }}
+                                position="static"
+                                activeStep={activeStep}
+                                nextButton={
+                                    <Button
+                                        size="small"
+                                        onClick={handleNext}
+                                        disabled={activeStep === maxSteps - 1}
+                                    >Next<KeyboardArrowRight />
+                                    </Button>
+                                }
+                                backButton={
+                                    <Button size="small" onClick={handleBack} disabled={activeStep === 0}>
+                                        <KeyboardArrowLeft />Back
+                                    </Button>
+                                }
+                            />
+                        </Grid>
                     </Grid>
+                    <Grid item xs={5}>
+                        <Typography variant='h5'>First and formemost, he's a software developer!</Typography>
+                    </Grid>
+                    <Grid item xs={12} />
+
 
                 </Grid>
 
@@ -216,7 +219,7 @@ export default function Home() {
                 TransitionComponent={TransitionUp}
                 onClose={handleTreeClose}
                 aria-describedby={"TreeCutting Photo"}>
-                <DialogTitle sx={{m: 0, p: 2}}>
+                <DialogTitle sx={{ m: 0, p: 2 }}>
                     <Typography>{images[activeStep].label}</Typography>
                     <IconButton
                         aria-label="Close"
@@ -226,10 +229,10 @@ export default function Home() {
                             right: 8, top: 8
                         }}
                     >
-                        <CloseIcon/>
+                        <CloseIcon />
                     </IconButton>
                 </DialogTitle>
-                <img src={images[activeStep].imgPath} alt={images[activeStep].label}/>
+                <img src={images[activeStep].imgPath} alt={images[activeStep].label} />
             </Dialog>
         </>
     )
