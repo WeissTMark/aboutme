@@ -23,6 +23,10 @@ const theme = createTheme({
             main: '#ff3d00',
         },
     },
+    typography: {
+        htmlFontSize: 20,
+        fontSize: 21
+    }
 });
 
 function App() {

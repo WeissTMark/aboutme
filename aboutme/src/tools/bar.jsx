@@ -1,7 +1,7 @@
 import React from 'react';
 import AppBar from '@mui/material/AppBar';
 import {IconButton, Toolbar, Button, Typography, Drawer} from '@mui/material';
-import {Navigate, useLocation, useNavigate} from 'react-router-dom';
+import {useLocation, useNavigate} from 'react-router-dom';
 import MenuIcon from '@mui/icons-material/Menu';
 
 export default function Header() {

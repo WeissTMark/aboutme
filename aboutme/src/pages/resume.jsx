@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "../tools/bar";
+import Footer from "../tools/footer";
 import { Document, Page } from 'react-pdf';
-import { Paper, Box } from '@mui/material';
+import { Paper} from '@mui/material';
 import resume from '../files/Weiss-Resume-Sept2022.pdf'
 
 export default function Resume() {
@@ -29,6 +30,7 @@ export default function Resume() {
                     </Document>
                 </div>
             </Paper>
+            <Footer/>
         </>
     )
 }
