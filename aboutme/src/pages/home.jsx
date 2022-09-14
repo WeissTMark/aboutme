@@ -81,7 +81,7 @@ const eagle = [
     },
     {
         key: 7,
-        label: 'A picture of Mark and his mother after recieving the eagle scout award',
+        label: 'A picture of Mark after completing his Eagle Board of Honor',
         imgPath: ep25
     },
     {
@@ -119,22 +119,22 @@ const eagle = [
 const mark = [
     {
         key: 0,
-        label: 'A before shot of the trail for mark\'s eagle project',
+        label: 'Mark!',
         imgPath: m1
     },
     {
         key: 1,
-        label: 'A before shot of the trail for mark\'s eagle project',
+        label: 'mArk! (And Sarah)',
         imgPath: m4
     },
     {
         key: 2,
-        label: 'A before shot of the trail for mark\'s eagle project',
+        label: 'maRk!',
         imgPath: m3
     },
     {
         key: 3,
-        label: 'A before shot of the trail for mark\'s eagle project',
+        label: 'marK!',
         imgPath: m2
     },
 ]

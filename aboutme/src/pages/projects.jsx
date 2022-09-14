@@ -1,8 +1,7 @@
 import React from "react";
 import Header from "../tools/bar";
 import Footer from "../tools/footer";
-import con from "../files/construction.jpg"
-import {Paper} from "@mui/material";
+import {Paper, Typography, Link, Grid} from "@mui/material";
 
 export default function Projects() {
     return (
@@ -18,8 +17,18 @@ export default function Projects() {
                 boxShadow: "4px 4px 4px rgba(0, 0, 0, 0.25)",
                 borderRadius: "25px",
             }}>
-                <img src={con} alt="Under construction" />
+                
             </Paper>
+                <Grid container justifyContent="center">
+                    <Grid item>
+                        <Typography variant='h5'>All my projects are available for viewing on my github account at:
+                        </Typography>
+                    </Grid>
+                    <Grid item xs={12}/>
+                    <Grid item>
+                    <Link variant='h5' href="https://github.com/WeissTMark">github.com/WeissTMark</Link>
+                    </Grid>
+                </Grid>
             <Footer />
         </>
     )
