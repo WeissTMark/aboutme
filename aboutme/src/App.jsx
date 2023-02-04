@@ -9,13 +9,17 @@ import {ThemeProvider, createTheme} from '@mui/material/styles';
 
 
 const theme = createTheme({
+    typography: {
+        fontFamily: 'lucida',
+        fontSize: 16
+    },
     palette: {
         mode: 'light',
         primary: {
-            main: '#4dd0e1',
+            main: '#54ebfc',
         },
         secondary: {
-            main: '#b388ff',
+            main: '#0585cb',
         },
     },
 });

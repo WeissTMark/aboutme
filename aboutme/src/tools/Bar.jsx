@@ -33,6 +33,8 @@ const Bar = () => {
 
     function copyToClip(val) {
         setSnackVal(val)
+        handleMailClose()
+        handlePhoneClose()
         navigator.clipboard.writeText(val).then(() => {
             setSnackOpen(true)
         })
@@ -59,11 +61,9 @@ const Bar = () => {
     return (
 
         <AppBar sx={{m: 0, p: 0}}>
-
             <Toolbar disableGutters>
                 <Typography variant="h6" noWrap component="a" sx={{
                     ml: 4,
-                    fontFamily: 'monospace',
                     fontWeight: 700,
                     letterSpacing: '.3rem',
                     color: 'inherit',
