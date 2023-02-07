@@ -170,10 +170,6 @@ export default function Home() {
                     alignItems="center">
                     <Grid item xs={12}>
                         <Typography variant={'h1'} color='secondary'>Who is Mark Weiss?</Typography>
-                        <Typography variant={'paragraph'} color='error'>This site is currently under construction, I appologize for the inconvinience.</Typography>
-                        <div></div>
-                        <Typography variant={'paragraph'} color='error'>Feel free to watch my progress at: </Typography>
-                        <Link href="https://github.com/WeissTMark/aboutme">github.com/WeissTMark/aboutme</Link>
                     </Grid>
                     <Grid item xs={10}>
                         <Carosel images={mark} />
