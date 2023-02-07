@@ -3,7 +3,7 @@ import Header from "../tools/bar";
 import Footer from "../tools/footer";
 import { Document, Page } from 'react-pdf';
 import { Paper } from '@mui/material';
-import resume from '../files/Weiss-Resume-Sept2022.png'
+import resume from '../files/Weiss_Resume_Feb_New.png'
 import resumeBig from '../files/resumebig.png'
 import styled from "styled-components"
 import { useRef, useState } from "react";
