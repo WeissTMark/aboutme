@@ -80,7 +80,7 @@ const Bar = () => {
     )
 
     return (
-
+        <>
         <AppBar sx={{m: 0, p: 0}}>
             <Toolbar disableGutters>
                 <IconButton color="inherit" aria-label="menu" onClick={openDrawer}>
@@ -171,6 +171,8 @@ const Bar = () => {
                 </Snackbar>
             </Toolbar>
         </AppBar>
+        <Toolbar/>
+        </>
     )
 }
 
